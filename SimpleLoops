@@ -1,0 +1,32 @@
+/**
+ * Make a loop to count by 18, but stop at 
+ * 100
+ * @author Jubilee
+ */
+public class SimpleLoops 
+{
+
+	public static void main(String[] args) 
+  {
+		
+		//create method to count sum nums 
+		countSumNums();
+	}
+
+/**
+ * This method will have a loop that will keep adding 18
+ * and start at -4
+ */
+	private static void countSumNums() 
+  {
+		  //Create loop with the i starting at -4 and adding up to 18
+		  for(int i = -4; i < 100; i += 18)
+	    	{
+		    	//print out the i 
+			    System.out.println(i);
+		    }
+		
+		
+	}
+
+}
