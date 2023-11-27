@@ -21,7 +21,7 @@ public class SimpleLoops
   	{
 		  //Create loop with the i starting at -4 and adding up to 18
 		  for(int i = -4; i < 100; i += 18)
-	    	{
+	    	    {
 		    	//print out the i 
 			    System.out.println(i);
 		    }
