@@ -1,0 +1,101 @@
+/**
+ * The class defines the qualities and behaviors
+ * of a cake object. 
+ * @author Jubilee
+ */
+
+
+
+public class Cake 
+{
+	
+	//Create a string called flavor 
+	//Property that stores the cake's flavor
+	String flavor = new String("Apple");
+	
+	//Create an int of the layers in a cake
+	int layers;
+	
+	
+	//Create a constructor 
+	public Cake(String flavor, int layers)
+	{
+		//assign a flavor to the cake
+		this.flavor = flavor;
+		//assign the layers to a cake 
+		this.layers = layers;
+	}
+	
+	//Create another constructor to assign 1 layer to the cake
+	public Cake(String flavor)
+	{
+		//assign the layers to a cake 
+		this.layers = 1;
+	}
+	
+	
+	
+	
+	//Create functionalities 
+	
+	
+	
+	
+	
+	/**
+	 * The getter of the flavor of cake
+	 * @return
+	 */
+	public String getFlavor()
+	{
+		return this.flavor;
+		
+	}
+	
+	/**
+	 * Set the flavor aka change the flavor of the cake
+	 * @param newFlavor
+	 */
+	public void setFlavor(String newFlavor)
+	{
+		this.flavor = newFlavor;
+	}
+	
+	/**
+	 * The getter of the layers of the cake 
+	 * @return number of the layers 
+	 */
+	public int getLayers()
+	{
+		return this.layers;
+		
+	}
+	
+	/**
+	 * This method will tell the user if the cake is yummy
+	 * by printing out a statement for it
+	 */
+	public static void tellIfYummy()
+	{
+		System.out.print("The cake is yummy!");
+	}
+	
+	/**
+	 * This method will increment the layers of the 
+	 * cake by 1 and return the answer
+	 * @return layer(s) + 1
+	 */
+	public int incrementLayers(int layers)
+	{
+		int newLayers = this.layers++;
+		return newLayers;
+	}
+	
+	/**
+	 * Print/tell the layers of the cake 
+	 */
+	public void tellFlavor(String newFlavor)
+	{
+		System.out.println("This cake is " + newFlavor + " flavored.");
+	}
+}
