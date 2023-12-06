@@ -1,0 +1,80 @@
+import java.util.Random;
+
+/**
+ * Create a class that will multiply two numbers other than negative
+ * by adding and not using the multiplication symbol
+ * @author Jubes
+ */
+
+
+public class MathStuff 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		
+		//declare two numbers to test Math methods on 
+		
+		int myInt = -4;
+		double myDub = -16.0;
+		
+		//test the sqrt method. it should find square root 
+		double mySqrt = Math.sqrt(myDub);
+		System.out.println(mySqrt);
+				
+		//test the abs method, it should produce absolute value 
+		double myAbsDub = Math.abs(myDub);
+		System.out.println(myAbsDub);
+		
+		double myAbsInt = Math.abs(myInt);
+		System.out.println(myAbsInt);
+
+		//test the pow method, it raises the first number
+		//to the power of the second number
+		//it only returns doubles
+		double base = 2;
+		double exp = 5;
+		double prod = Math.pow(base, exp);
+		System.out.println(prod);
+		
+		//random generator
+		double ranNum = Random(1.0, 10.0);
+		
+		
+		
+		
+		//Create method called multTwoNums 
+		multTwoNums(4, 3);
+		
+		
+
+	}
+	
+/**
+ * Find the product by adding 
+ * @param x
+ * @param y
+ */
+
+	private static void multTwoNums(int x, int y) {
+		
+		//other option; to make adder constant
+		int z = x;
+		
+		//create a forloop that will multiply by adding 
+		for(int i = 1; i <y ; i++)
+		{
+			//divide y by i to result in a constant number
+			//int z = y/i;
+			//add by the result of z (Change to + for product or * for exponential)
+			x*=z;
+			
+			
+		}
+		//print result
+		System.out.println(x);
+				
+	}
+
+}
