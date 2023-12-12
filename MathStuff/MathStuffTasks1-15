@@ -167,7 +167,10 @@ public class MathStuff
 			System.out.println(Math.pow(doubleA.intValue(), integerA.doubleValue()));
 		
 		
-		
+			int q = 7;
+			int r = 3;
+			System.out.println(addTwoIntegers(q,r));
+
 		
 
 	}
@@ -217,7 +220,24 @@ public class MathStuff
 		}
 		//print result
 		System.out.println(x);
-
+		
+		
+	}
+	
+	/**
+	 * This method take in two Integer objects and returns their sum
+	 * as an int, even though the formal parameters are Integers, it will turn
+	 * passed ints into Integers automatically. This process is called autoboxing.
+	 * @param x the first additive 
+	 * @param y the second additive
+	 */
+	
+	private static int addTwoIntegers(Integer x, Integer y) 
+	{
+		
+			
+		return x+y;
+				
 	}
 }
 	
