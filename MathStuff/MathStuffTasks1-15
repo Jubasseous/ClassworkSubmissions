@@ -1,4 +1,3 @@
-import java.math.RoundingMode;
 import java.util.Random;
 
 /**
@@ -181,7 +180,8 @@ public class MathStuff
  * @param y
  */
 
-	private static void multTwoNums(int x, int y) {
+	private static void multTwoNums(int x, int y) 
+	{
 		
 		//other option; to make adder constant
 		int z = x;
