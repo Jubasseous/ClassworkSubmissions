@@ -1,243 +1,109 @@
-import java.util.Random;
+import java.util.Scanner;
 
-/**
- * Create a class that will multiply two numbers other than negative
- * by adding and not using the multiplication symbol
- * @author Jubes
- */
-
-
-public class MathStuff 
+public class IfsAndLoops 
 {
 
 	public static void main(String[] args) 
 	{
 		
+		//TASK 1: Scan in two ints and store them as Integers 
+		//called 'x' and 'y.'
+		Scanner twoInt = new Scanner(System.in);
+		Integer x = twoInt.nextInt();
+		Integer y = twoInt.nextInt();
+		Integer z =twoInt.nextInt();
 		
-		//declare two numbers to test Math methods on 
-		
-		int myInt = -4;
-		double myDub = -16.0;
-		
-		//test the sqrt method. it should find square root 
-		double mySqrt = Math.sqrt(myDub);
-		System.out.println(mySqrt);
-				
-		//test the abs method, it should produce absolute value 
-		double myAbsDub = Math.abs(myDub);
-		System.out.println(myAbsDub);
-		
-		double myAbsInt = Math.abs(myInt);
-		System.out.println(myAbsInt);
+		twoInt.close();
 
-		//test the pow method, it raises the first number
-		//to the power of the second number
-		//it only returns doubles
-		double base = 2;
-		double exp = 5;
-		double prod = Math.pow(base, exp);
-		System.out.println(prod);
+		//TASK 2: Call a method named "printEvenOrOdd." Pass it x and y. 
+		printEvenOrOdd(x, y);
 		
-		//Task 1: Instantiate an Integer object
-		// Old way: Integer myInt = new Integer(5);
-		Integer myInt1 = 4;
-		//int x = 4;
+		//TASK 3: Call a method named "printExpTable" that will be passed x 
+		//and y. 
+		printExpTable(x,y);
 		
-		//print out max and min values an Integer object can store
-		System.out.println(Integer.MAX_VALUE);
-		System.out.println(Integer.MIN_VALUE);
+		//TASK 4: Call a method named "getFact()" that will return the factorial of a number. 
+		//In the main method, add a print statement that will print "The value of the factorial is (the returned value)."
+		System.out.println("The value of the factorial is " + getFact(z));
 		
 		
-		//Task 2: Instantiate a Double object
-		Double myDub1 = 6.9;
-		
-		//print out max and min values a Double object can store 
-		System.out.println(Double.MIN_VALUE);
-		System.out.println(Double.MAX_VALUE);
-		
-		//Integer & Double are Wrapper Classes 
-		//Like primitive data types, but a class 
-		
-		//Task 3: declare an int and print it as a double
-		int a = 4;
-		//Casting
-		System.out.println( (double) a);
-		
-		//Task 4: declare a double and print it as a int
-		double b = 5.1;
-		System.out.println( (int) b);
-		
-		
-		
-		
-		//Task 1: Create a method that generates a random number 
-		//from 1-10 inclusive.
-		
-		Random randNum = new Random();
-		
-		//setting upperbound to make the range 
-		int upperbound = 11;
-		
-		//Generate random values between 0- 10 using nextInt()
-		int randInt = randNum.nextInt(upperbound);
-		
-		//Check to see if works with print statement 
-		System.out.println(randInt);
-		
-		
-		//Task 2: Declare two ints called intA and intB that have 
-		//values of -36 and +12 respectively.
-		
-		int intA = -36;
-		int intB = 12;
-
-		//Task 3: Declare two doubles called dubA and dubB that 
-		//have values of -100.0 and 0.64 respectively.
-		
-		double dubA = -100.0;
-		double dubB = 0.64;
-
-		//Task 4: Instantiate two Integer objects called integerA 
-		//and integerB with the same values as the ints. 
-		
-		Integer integerA = -36;
-		Integer integerB = 12;
-
-		//Task 5: Instantiate two Double objects called doubleA and 
-		//doubleB with the same values as the doubles. 
-		
-		Double doubleA = -100.0;
-		Double doubleB = 0.64;
-
-		//You should have a method that raises one 
-		//number to another. Do not change this method.
-		
-		//Create method called multTwoNums 
-				multTwoNums(4, 3);
-		
-
-		//Task 6: Use your method to print out one int 
-		//raised to the power of the other int. 
-				expTwoNums(intA, intB);
-			
-
-		//Task 7: Use your method to print out one Integer raised 
-		//to the power of the other Integer.
-				expTwoNums(integerA, integerB);
-				
-				
-		//Task 8: Use your method to print out one double 
-		//raised to the power of the other double.
-				expTwoNums((int) dubA, (int) dubB);
-
-		//Task 9: Use your method to print out one Double raised 
-		//to the power of the other Double. 
-				expTwoNums(doubleA.intValue(), doubleB.intValue());
-				
-
-		//For the rest of the problems, use the Math class 
-		//methods to complete the task.
-				
-
-		//Task 10: Print out the absolute value of intA, 
-		//integerA, dubA, and doubleB.
-			System.out.println(Math.abs(intA));
-			System.out.println(Math.abs(dubA));
-			System.out.println(Math.abs(integerA));
-			System.out.println(Math.abs(doubleB));
-
-		//Task 11: Print out the square root of dubB
-		//and doubleB.
-			System.out.println(Math.sqrt(dubB));
-			System.out.println(Math.sqrt(doubleB));
-
-		//Task 12: Print out the square root of the 
-		//absolute value of intA and integerA.
-			System.out.println(Math.sqrt((Math.abs(intA))));
-			System.out.println(Math.sqrt(Math.abs(integerA.doubleValue())));
-				
-		//Task 13: Print out one double raised to the power of the other double.
-			System.out.println(Math.pow(dubB, dubA));
-
-		//Task 14: Print out one int raised to the power of one of your doubles.
-			System.out.println(Math.pow(dubB, (double) intA));
-
-		//Task 15: Print out one Double raised to the power of one of your Integers.
-			System.out.println(Math.pow(doubleA.intValue(), integerA.doubleValue()));
-		
-		
-			int q = 7;
-			int r = 3;
-			System.out.println(addTwoIntegers(q,r));
-
-		
-
 	}
 	
 /**
- * Find the product by adding 
- * @param x
- * @param y
+ * This method will return the factorial of a number. 
+ * If it is negative, instead print an error message and return -1. 
+
+ * @param z
+ * @return 
+ */
+private static int getFact(Integer z) 
+	{
+	
+	int constant = z;
+	
+		if (constant < 0)
+		{
+			System.out.print("Yikes, cannot compute...the value of the factorial is -1.");
+			return -1;
+		}
+		else
+		{
+			
+			for(int i = 1; i < constant; i++)
+			{
+			z = z * constant;
+			}
+			return z;
+			
+		}
+		
+		
+	}
+/**
+ * This method will print the exponent table of x to the y.
+ *  If either number is negative, print an error message instead.	
  */
 
-	private static void multTwoNums(int x, int y) 
+  private static void printExpTable(Integer x, Integer y) 
+  	{
+	  if (x < 0 || y < 0)
+	  {
+		  System.out.println("Lol jokes bro!"
+		  		+ " Sorry, I have not learned how to do that yet.");
+	  }
+	  else   
+		  System.out.println(x + "to the" + y + " = " + Math.pow(x.doubleValue(), y.doubleValue()));	
+	}
+
+/**
+   * This method should print whether or not they 
+   * are both odd, both even, or if they are different. 	
+   * @param x
+   * @param y
+   */
+	private static void printEvenOrOdd(Integer x, Integer y) 
 	{
-		
-		//other option; to make adder constant
-		int z = x;
-		
-		//create a forloop that will multiply by adding 
-		for(int i = 1; i <y ; i++)
+		//check if they are even by find the modulus(remainder) of the number
+		if( x % 2 == 0 && y % 2 == 0)
 		{
-			//divide y by i to result in a constant number
-			//int z = y/i;
-			
-			//add by the result of z (Change to + for product or * for exponential)
-			x+=z;
-			
-			
+		 	System.out.println( x + " and " + y + " are both even.");
 		}
-		//print result
-		System.out.println(x);
-				
-	}
-	private static void expTwoNums(int x, int y) 
-	{
-		
-		//other option; to make adder constant
-		int z = x;
-		
-		//create a forloop that will find the result of number to a power
-		for(int i = 1; i <y ; i++)
+		//check if they are odd by finding the mod of the num
+		else if (x % 2 != 0 && y % 2 != 0)
 		{
-			//divide y by i to result in a constant number
-			//int z = y/i;
-			
-			//add by the result of z (Change to + for product or * for exponential)
-			x*=z;
-			
-			
+			System.out.println( x + " and " + y + " are both odd.");
 		}
-		//print result
-		System.out.println(x);
-		
+		else if (x % 2 == 0 && y %2 != 0)
+		{
+			System.out.println("They are different because"
+					+ " " + x + " is even and " + y + " is odd.");
+		}
+		else if (x % 2 != 0 && y %2 == 0)
+		{
+			System.out.println("They are different because " 
+					+ x + " is odd and " + y + " is even.");
+		}	
 		
 	}
-	
-	/**
-	 * This method take in two Integer objects and returns their sum
-	 * as an int, even though the formal parameters are Integers, it will turn
-	 * passed ints into Integers automatically. This process is called autoboxing.
-	 * @param x the first additive 
-	 * @param y the second additive
-	 */
-	
-	private static int addTwoIntegers(Integer x, Integer y) 
-	{
-		
-			
-		return x+y;
-				
-	}
+
 }
-	
