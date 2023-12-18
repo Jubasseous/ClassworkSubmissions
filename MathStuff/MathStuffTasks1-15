@@ -72,7 +72,7 @@ private static int getFact(Integer z)
 		  		+ " Sorry, I have not learned how to do that yet.");
 	  }
 	  else   
-		  System.out.println(x + "to the" + y + " = " + Math.pow(x.doubleValue(), y.doubleValue()));	
+		  System.out.println(x + " to the " + y + " = " + Math.pow(x.doubleValue(), y.doubleValue()));	
 	}
 
 /**
