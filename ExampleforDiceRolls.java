@@ -37,7 +37,7 @@ public class ExampleRolls
  * char shows up in the String and return that number.
  * @param x, y 
  */
-private static int countChars(String x, char y) 
+public static int countChars(String x, char y) 
 	{
 		//count variable
 		int z = 0; 
