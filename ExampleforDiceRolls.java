@@ -14,7 +14,9 @@ public class ExampleRolls
 		Scanner newScan = new Scanner(System.in);
 		
 		//roll200();
-		
+		//User instructions
+		System.out.println("Type out your word in lowercase and enter. Then type in a "
+				+ "letter that you want to find and enter");
 		
 		//declare a string variable that takes in the user's word
 		String x = newScan.nextLine();
