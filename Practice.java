@@ -31,7 +31,7 @@ public class Concat
 	private static void noSpaces(String phrase) 
 	{
 		int space = 0;
-		String noSpaces = " ";
+		String noSpaces = new String("");
 		
 		for(int i = 0; i < phrase.length(); i++)
 		{
@@ -42,7 +42,7 @@ public class Concat
 			}
 			space = i;	
 		}
-		System.out.print(noSpaces);
+		System.out.print(phrase.substring(0) + space + phrase.substring(phrase.length() -1));
 		
 		
 		
