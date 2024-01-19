@@ -46,14 +46,14 @@ public class DiceTuts
 		diceTaker.close();
 	}
 
-/**
- * Create a method with two formal parameters: a String object and a char. 
- * This method should count how many times the char shows up in the String 
- * and return that number.
- * @param fullPhrase
- * @param numOfTimesRan
- * @return 
- */
+	/**
+	 * Create a method with two formal parameters: a String object and a char. 
+	 * This method should count how many times the char shows up in the String 
+	 * and return that number.
+	 * @param fullPhrase
+	 * @param numOfTimesRan
+	 * @return 
+	 */
 	private static int findPlus(String fullPhrase, char numOfTimesRan) 
 	{
 		//count variable 
@@ -71,13 +71,14 @@ public class DiceTuts
 		return loop;
 		
 	}
-/**
- * Create a method that uses the num of dice and which dice int to create 
- * a for loop that rolls the dice and adds them together 
- * Print result
- * @param j
- * @param k
- */
+	
+	/**
+	 * Create a method that uses the num of dice and which dice int to create 
+	 * a for loop that rolls the dice and adds them together 
+	 * Print result
+	 * @param j
+	 * @param k
+	 */
 	//private static int rollDice(int j, int k) 
 	private static void rollDice(int j, int k)
 	{
