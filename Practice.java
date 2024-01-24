@@ -16,7 +16,7 @@ public class Concat
 		//Create a string that takes in the user's input
 		String phrase = userIn.nextLine();
 		
-		noSpaces(phrase);
+		System.out.println(noSpaces(phrase));
 		
 		//Close scanner 
 		userIn.close();
@@ -28,22 +28,35 @@ public class Concat
 	 * @param phrase
 	 */
 
-	private static void noSpaces(String phrase) 
+	private static String noSpaces(String phrase) 
 	{
-		int space = 0;
+		//Create a new string that will take in the phrase and remove the spaces
 		String noSpaces = new String("");
+		//Create an int that will keep track of where the spaces are
+		int spaces = 0;
 		
+		//Create a for loop that will check every character to see if there is a space
 		for(int i = 0; i < phrase.length(); i++)
 		{
+			//if statement to  check if the character is a space
 			if(phrase.charAt(i) == ' ')
 			{
-				noSpaces = noSpaces.concat(phrase.substring(space, i));
+				
+				//if there's a space, concatenate from the bringing which is space to where the 
+				//space is at
+				noSpaces = noSpaces.concat(phrase.substring(spaces + 1, i));
+				//make the spaces equal to i so that it knows to start from the last space
+				spaces = i;
 				
 			}
-			space = i;	
+			
 		}
-		System.out.print(phrase.substring(0) + space + phrase.substring(phrase.length() -1));
 		
+		//Make the string equal to the first character of the space + the edited phrase + the last character
+		noSpaces = String.valueOf(phrase.charAt(0)).concat(noSpaces).concat(phrase.substring(spaces + 1));
+		
+		//return the edited
+		return noSpaces;
 		
 		
 		
