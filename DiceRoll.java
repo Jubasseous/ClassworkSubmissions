@@ -15,21 +15,6 @@ public class DiceTuts
 		//take in user's input
 		String fullPhrase = diceTaker.nextLine();
 		
-		//character for how many times loop will run
-		char numOfTimesRan = '+'; 
-		
-		//create a for loop that will run a number of times based on how many + 
-		//there are minus the last one for the modifier
-		//Using a method to find how many plus signs there are
-			
-		//if(findPlus(fullPhrase, numOfTimesRan) = 1)
-		{
-			for(int i = 1; i < (findPlus(fullPhrase, numOfTimesRan)); i++)
-				{
-					
-					
-				}
-		}	
 		//find the d 
 		char d = 'd';
 		int input = fullPhrase.indexOf(d);
@@ -46,32 +31,6 @@ public class DiceTuts
 		diceTaker.close();
 	}
 
-	/**
-	 * Create a method with two formal parameters: a String object and a char. 
-	 * This method should count how many times the char shows up in the String 
-	 * and return that number.
-	 * @param fullPhrase
-	 * @param numOfTimesRan
-	 * @return 
-	 */
-	private static int findPlus(String fullPhrase, char numOfTimesRan) 
-	{
-		//count variable 
-		int z = 0;
-		
-		for(int i = 1; i < fullPhrase.length(); i++)
-		{
-			if(fullPhrase.charAt(i) == numOfTimesRan)
-			{
-				z++;
-			}
-		}
-		int loop = z;
-		
-		return loop;
-		
-	}
-	
 	/**
 	 * Create a method that uses the num of dice and which dice int to create 
 	 * a for loop that rolls the dice and adds them together 
