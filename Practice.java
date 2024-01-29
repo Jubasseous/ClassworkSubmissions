@@ -1,66 +1,77 @@
 import java.util.Scanner;
 
 /**
- * Will create a method that will take in a string and return
- * the string with no spaces by concat method 
+ * Take in user's input and print the dice result 
  * @author Jubes
  */
-public class Concat 
+public class DiceTuts 
 {
 
 	public static void main(String[] args) 
 	{
-		//Instantiate a scanner 
-		Scanner userIn = new Scanner(System.in);
+		//import scanner to take in user's input
+		Scanner diceTaker = new Scanner(System.in);
 		
-		//Create a string that takes in the user's input
-		String phrase = userIn.nextLine();
-		
-		System.out.println(noSpaces(phrase));
-		
-		//Close scanner 
-		userIn.close();
-
-	}
-	/**
-	 * Create a method that will take in string and return it 
-	 * without spaces 
-	 * @param phrase
-	 */
-
-	private static String noSpaces(String phrase) 
-	{
-		//Create a new string that will take in the phrase and remove the spaces
-		String noSpaces = new String("");
-		//Create an int that will keep track of where the spaces are
-		int spaces = 0;
-		
-		//Create a for loop that will check every character to see if there is a space
-		for(int i = 0; i < phrase.length(); i++)
-		{
-			//if statement to  check if the character is a space
-			if(phrase.charAt(i) == ' ')
-			{
-				
-				//if there's a space, concatenate from the bringing which is space to where the 
-				//space is at
-				noSpaces = noSpaces.concat(phrase.substring(spaces + 1, i));
-				//make the spaces equal to i so that it knows to start from the last space
-				spaces = i;
-				
-			}
+		//take in user's input
+		String fullPhrase = diceTaker.nextLine();
+	
 			
+		//Set strings as ints and create a method
+		rollDice(fullPhrase);
+		
+		
+		//close scanner 
+		diceTaker.close();
+	}
+
+		
+
+
+
+	
+	/**
+	 * Create a method that uses the num of dice and which dice int to create 
+	 * a for loop that rolls the dice and adds them together 
+	 * Print result
+	 * @param j
+	 * @param k
+	 */
+	//private static int rollDice(String fullPhrase) 
+	private static void rollDice(String fullPhrase)
+	{
+		//find the d 
+		char d = 'd';
+		int input = fullPhrase.indexOf(d);
+					
+		//Get the inputs 
+		String numOfDice = fullPhrase.substring(0, input);
+		String whatDice = fullPhrase.substring(input + 1, fullPhrase.length());
+		
+		
+		//Passes as an int
+		int j = Integer.parseInt(numOfDice);
+		int k = Integer.parseInt(whatDice);
+				
+				
+		//declare an int as the starting point 
+		int result = 0;
+		
+		
+		//Create a for loop that will add the results together 
+		for(int i = 1; i <= j; i++)
+		{
+			//create an int that will be the rolls 
+			int roll = (int)(Math.random() * k + 1);
+			System.out.println(roll);
+			//add up the rolls 
+			result += roll;
 		}
-		
-		//Make the string equal to the first character of the space + the edited phrase + the last character
-		noSpaces = String.valueOf(phrase.charAt(0)).concat(noSpaces).concat(phrase.substring(spaces + 1));
-		
-		//return the edited
-		return noSpaces;
-		
-		
-		
-		
+	
+		//return result;
+
+		//test
+		System.out.println("You rolled " + j + " " + k + "-sided dice" + ". You deal "
+				+ result + " damage.");
 	}
 
 }
