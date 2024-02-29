@@ -38,7 +38,8 @@ public class ArrayWork
 	 * @return
 	 */
 
-	private static int[] giveFirstLastArray(int[] arr) {
+	private static int[] giveFirstLastArray(int[] arr) 
+	{
 		
 		//make a new int equal to the first and last elements of the passed array
 		int[] newArr = {arr[0], arr[arr.length - 1]};
