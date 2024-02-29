@@ -27,9 +27,9 @@ public class ArrayWork
 		
 		giveFirstLastArray(arr1);
 		//For example, if you have an array evens {2, 4, 6, 8, 10, 12} and you execute: 
-				//giveFirstAndLastArray( evens ) then the method will return {2, 12}
-		
-	
+		//giveFirstAndLastArray( evens ) then the method will return {2, 12}
+		int[] firstLast = giveFirstLastArray(arr1);
+		System.out.println(firstLast[0] + "" + firstLast[1]);
 	}
 	
 	/**
