@@ -21,6 +21,8 @@ public class PrintPrevNextElement
 	/**
 	 * Make a method that is passed an array of doubles nums and an int n.
 	 *  The method should print out the number before and after the n'th element.
+	 *  @param n
+	 *  @param arr
 	 */
 	
 	public static void printPrevNextElement(double[] arr, int n)
