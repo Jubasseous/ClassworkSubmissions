@@ -17,7 +17,7 @@ public class TraversalMethods
 		System.out.println(getHighValue(arr1));
 
 		//Make a method that is passed an array of doubles and 
-		//returns a double array consisting of their average. 
+		//returns a double consisting of their average. 
 		double[] arr2 = { 3.1, 4.2, 5.0, 6.2, 6.9};
 		getAverageDoub(arr2);
 
