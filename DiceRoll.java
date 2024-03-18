@@ -14,17 +14,9 @@ public class DiceTuts
 		
 		//take in user's input
 		String fullPhrase = diceTaker.nextLine();
-		
-		//find the d 
-		char d = 'd';
-		int input = fullPhrase.indexOf(d);
 			
-		//Get the inputs 
-		String numOfDice = fullPhrase.substring(0, input);
-		String whatDice = fullPhrase.substring(input + 1, fullPhrase.length());
-			
-		//Set strings as ints and create a method
-		rollDice(Integer.parseInt(numOfDice), Integer.parseInt(whatDice));
+		//Takes in string and create a method
+		rollDice(String fullPhrase);
 		
 		
 		//close scanner 
@@ -32,15 +24,27 @@ public class DiceTuts
 	}
 
 	/**
-	 * Create a method that uses the num of dice and which dice int to create 
+	 * Create a method that splits the num of dice and what dice into ints and
+  	 * uses the num of dice and which dice int to create 
 	 * a for loop that rolls the dice and adds them together 
 	 * Print result
 	 * @param j
 	 * @param k
 	 */
 	//private static int rollDice(int j, int k) 
-	private static void rollDice(int j, int k)
+	private static void rollDice(String fullPhrase)
 	{
+		//find the d 
+		char d = 'd';
+		int input = fullPhrase.indexOf(d);
+			
+		//Get the inputs 
+		String numOfDice = fullPhrase.substring(0, input);
+		String whatDice = fullPhrase.substring(input + 1, fullPhrase.length());
+		
+		int j = Integer.parseInt(numOfDice);
+		int k = Integer.parseInt(whatDice);
+		
 		//declare an int as the starting point 
 		int result = 0;
 		
