@@ -39,7 +39,7 @@ public class Student
 	 * @return GPA = Average GPA
 	 */
 	
-	public double getGPA()
+	private double getGPA()
 	{
 		double GPA = (scienceGrade + mathGrade + theologyGrade) / 3;
 		
