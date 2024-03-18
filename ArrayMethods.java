@@ -20,7 +20,7 @@ public class ArrayWork
 		//For example, if you have an array evens {2, 4, 6, 8, 10, 12} and you execute: 
 		//divideElementByTwo( evens, 4 ) then evens should now be equal to
 		//{2, 4, 6, 8, 5, 12}
-		System.out.println(divideElementByTwo(arr1, 2));
+		
 
 		// Task 2:  Create a method giveFirstAndLastArray that if passed an array, 
 		//will return an array consisting of ONLY the first and last two elements. 
@@ -56,12 +56,12 @@ public class ArrayWork
 	 * @return
 	 */
 
-	private static int divideElementByTwo(int[] arr, int n) 
+	private static void int divideElementByTwo(int[] arr, int n) 
 	{
 		//make the n'th element divided by two 
 		arr[n] /= 2;
-		//return
-		return arr[n];
+		
+		
 	}
 
 }
