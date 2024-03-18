@@ -162,6 +162,16 @@ public class DiceFinal
 			//create an int that will be the rolls 
 			int roll = (int)(Math.random() * faces + 1);
 			
+			//check if roll is crit hit or crit fail 
+			if(roll == faces)
+			{
+				System.out.println("You got a crit hit on your " + i + " die.");
+			}
+			else if(roll == 1)
+			{
+				System.out.println ("You got a crit fail on your " + i + " die.");
+			}
+			
 			//System.out.println(roll);
 			//add up the rolls 
 			result += roll;
