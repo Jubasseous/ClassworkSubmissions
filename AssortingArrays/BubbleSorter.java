@@ -42,8 +42,7 @@ public class BubbleSorter {
 		for( int i = 0; i < nums.length; i++)
 		{
 			//for loop that will check an element and swap if the
-			//element before is greater. This will get the element in the right order,
-			//but will stop before the length minus i 
+			//element before is greater.
 			for(int j = 1; j < nums.length - i; j++)
 				
 			{
