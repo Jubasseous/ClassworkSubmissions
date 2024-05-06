@@ -35,7 +35,7 @@ public class BubbleSorter {
 	 * @param nums
 	 * @return
 	 */
-	private static int[] bubbleSort(int[] nums)
+	private static void int[] bubbleSort(int[] nums)
 	{
 		//for loop to traverse the array and makes sure that the for loop within runs for 
 		//each element 
@@ -60,7 +60,6 @@ public class BubbleSorter {
 			}
 		}
 		
-		return nums;
 	}
 	/**
 	 * This method will make an array that has 2000 elements
@@ -68,7 +67,7 @@ public class BubbleSorter {
 	 * 1 and 1000
 	 * @return
 	 */
-	private static int[] makeRandom() 
+	private static void int[] makeRandom() 
 	{
 		//declares an array to have a total of 2000 elements
 		int[] bigNums = new int[2000];
@@ -85,9 +84,6 @@ public class BubbleSorter {
 			bigNums[i] = randomNumber;
 			
 		}
-		
-		//return the array
-		return bigNums;
 		
 	}
 }
