@@ -70,10 +70,10 @@ public class InsertionSorter
 					arr[i] = last;
 				
 					//works, but is step by step and not optimized
-					arr[index] = arr[i];
-					arr[i] = last;
-					index--;
-					last = arr[i];
+					//arr[index] = arr[i];
+					//arr[i] = last;
+					//index--;
+					//last = arr[i];
 					
 					
 				}
