@@ -45,16 +45,91 @@ public class TwoDArrTrav
 		{
 			System.out.print(names2[0][i]);
 		}
+		
+		//Task 1
+		print2DArr(names2);
+		
+		//Declare a 2D array
+		double [][]  sArr = new double[7][6];
+		
+		//task 2
+		printArr(allOnes2D(sArr));
 			
 				
  	}
+	/**
+	 * Print double array
+	 * @param arr
+	 */
+	private static void printArr(double [][] arr)
+	{
+		//for loop to traverse the array
+		for(int i = 0; i < arr[6].length; i++)
+		{
+			for(int j = 0; j < arr.length; j++)
+			{
+				//print out each element
+				System.out.print(arr[j][i]);
+			}
+					
+			System.out.println(" ");
+		
+		}
+	}
 	
+	/**
+	 * Create a method allOnes2D() that is passed a 2D double array, 
+	 * makes an array of the same column and row length but all its literals are 
+	 * 0.0 called copyArr, and then changes each element inside to 1.0 and returns copyArr. 
+	 * (So it is passed a 2D array and returns a 2D array with all 0.0).
+	 * @param arr
+	 */
+	
+	private static double [][] allOnes2D(double [][] arr)
+	{
+		double [][] copyArr = new double[arr.length][arr[0].length];
+		
+		for(int r = 0; r < copyArr.length; r++)
+		{
+			for(int c = 0; c < copyArr[0].length; c++)
+			{
+				copyArr[r][c] = 1.0;
+			}
+						
+	
+		}
+		
+		return copyArr;
+		
+	}
 	/**
 	 * This method is to print out each element of the array
 	 * Task 6
-	 * @param nums
+	 * @param arr
 	 */
-	private static void printArr(String[][] words) {
+	private static void printArr(String [][] arr)
+	{
+		//for loop to traverse the array
+		for(int i = 0; i < arr[6].length; i++)
+		{
+			for(int j = 0; j < arr.length; j++)
+			{
+				//print out each element
+				System.out.print(arr[j][i]);
+			}
+					
+			System.out.println(" ");
+		
+		}
+	}
+	
+	/**
+	 * Create a method print2DArray() that is passed a 2D String array 
+	 * and will print out each element in row-major order (instead of 
+	 * column-major order like we did yesterday). 
+	 * @param words
+	 */
+	private static void print2DArr(String[][] words) {
 		//for loop to traverse the array
 		for(int i = 0; i < words.length; i++)
 		{
